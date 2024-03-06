@@ -1,0 +1,130 @@
+/* Colours:
+#DDD
+
+#F5F5F5
+
+#6495ED
+
+*/
+
+
+body {
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    /* Font size for entire web-page */
+    font-size: 1rem; 
+}
+
+legend {
+    /* Font size for <legend> tag */
+    font-size: 2rem; 
+}
+
+.outer-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    max-width: 50rem;
+    padding: 20px;
+    font-size: 1rem; /* Font size for entire web-page excluding <legend> */
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+}
+
+input[type="submit"] {
+    background-color: #6495ED;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+}
+
+@media screen and (max-width: 25rem) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    label {
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="submit"] {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Media query for Tablet view between 25rem and 40rem: */
+@media screen and (min-width: 25rem) and (max-width: 40rem) {
+    .form-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Add space between elements */
+    }
+
+    label {
+        width: auto;
+        flex-basis: 45%; /* Each label occupies 45% width in tablet and desktop view */
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    input[type="text"],
+    textarea {
+        flex-basis: 50%; /* Each input occupies 50% width in tablet and desktop view */
+    }
+}
+
+/* Media query for Desktop view between 40rem and 50rem: */
+@media screen and (min-width: 40rem) and (max-width: 50rem) {
+    .form-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Add space between elements */
+    }
+
+    label {
+        width: auto;
+        flex-basis: 45%; /* Each label occupies 45% width in tablet and desktop view */
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    input[type="text"],
+    textarea {
+        flex-basis: 50%; /* Each input occupies 50% width in tablet and desktop view */
+    }
+}
+
